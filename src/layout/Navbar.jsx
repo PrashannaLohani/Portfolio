@@ -4,7 +4,7 @@ import { AppBar, Toolbar, Typography, Box } from "@mui/material";
 export default function Navbar() {
   return (
     <AppBar
-      position="static"
+      position="fixed"
       color="transparent"
       sx={{
         height: "5rem",

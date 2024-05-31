@@ -4,8 +4,8 @@ import { styled } from "@mui/system";
 
 const AnimatedBorder = styled("div")({
   animation: "morph 8s ease-in-out infinite",
-  backgroundImage: "url('/static/MyPhoto.jpg')", // Replace with the actual path
-  backgroundColor: "rabbit",
+  backgroundImage: "url('../static/MyPhote.jpg')", // Replace with the actual path
+  backgroundColor: "",
   backgroundPosition: "50%",
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
