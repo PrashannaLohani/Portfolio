@@ -1,5 +1,26 @@
-import { GitHub, HtmlTwoTone, Image, LinkedIn } from "@mui/icons-material";
+import { GitHub, LinkedIn } from "@mui/icons-material";
 import { Box, Divider, Fade, Tooltip, Typography, Zoom } from "@mui/material";
+import { styled } from "@mui/system";
+
+const AnimatedBorder = styled("div")({
+  animation: "morph 8s ease-in-out infinite",
+  backgroundImage: "url('/static/MyPhoto.jpg')", // Replace with the actual path
+  backgroundColor: "rabbit",
+  backgroundPosition: "50%",
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "cover",
+  border: "3px solid #2d2e32",
+  borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%",
+  height: "25rem", // Reduced height
+  width: "25rem", // Reduced width
+  position: "relative",
+  transition: "all 1s ease-in-out",
+  "@keyframes morph": {
+    "0%": { borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%" },
+    "50%": { borderRadius: "30% 60% 70% 40% / 30% 70% 40% 60%" },
+    "100%": { borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%" },
+  },
+});
 export default function FirstPage() {
   return (
     <Box
@@ -80,7 +101,7 @@ export default function FirstPage() {
           </a>
         </Box>
 
-        <Box mt="5rem" alignItems="center" justifyContent="center">
+        <Box mt="2rem" alignItems="center" justifyContent="center">
           <Typography
             variant="h6"
             fontWeight="400"
@@ -242,8 +263,13 @@ export default function FirstPage() {
           </Box>
         </Box>
       </Box>
-      <Box minHeight="20vh" bgcolor="blue">
-        <Typography variant="h1">Photo</Typography>
+      <Box
+        minHeight="20vh"
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+      >
+        <AnimatedBorder></AnimatedBorder>
       </Box>
     </Box>
   );

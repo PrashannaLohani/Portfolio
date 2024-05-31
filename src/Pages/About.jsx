@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 
 export default function About() {
   return (
@@ -60,6 +60,9 @@ export default function About() {
           My current main stack is React/Nextjs. in combination with the
           Tailwind, Material UI and JavaScript
         </Typography>
+        <Button variant="contained" sx={{ mt: "1rem" }}>
+          Download Resume
+        </Button>
       </Box>
     </Box>
   );
