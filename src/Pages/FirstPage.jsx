@@ -1,11 +1,11 @@
 import { GitHub, LinkedIn } from "@mui/icons-material";
 import { Box, Divider, Fade, Tooltip, Typography, Zoom } from "@mui/material";
 import { styled } from "@mui/system";
+import { useEffect, useState } from "react";
 
 const AnimatedBorder = styled("div")({
   animation: "morph 8s ease-in-out infinite",
-  backgroundImage: "url('../static/MyPhote.jpg')", // Replace with the actual path
-  backgroundColor: "",
+  backgroundImage: "url('/Mypic2.png')", // Replace with the actual path
   backgroundPosition: "50%",
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
@@ -22,6 +22,30 @@ const AnimatedBorder = styled("div")({
   },
 });
 export default function FirstPage() {
+  const [backgroundColor, setBackgroundColor] = useState("pink");
+
+  useEffect(() => {
+    const calmColors = [
+      "#ADD8E6", // Light Blue
+      "#E0FFFF", // Light Cyan
+      "#F5FFFA", // Mint Cream
+      "#F0FFF0", // Honeydew
+      "#FFFACD", // Lemon Chiffon
+      "#E6E6FA", // Lavender
+      "#FFE4E1", // Misty Rose
+      "#D8BFD8", // Thistle
+    ];
+
+    const changeBackgroundColor = () => {
+      const newColor =
+        calmColors[Math.floor(Math.random() * calmColors.length)];
+      setBackgroundColor(newColor);
+    };
+
+    const intervalId = setInterval(changeBackgroundColor, 2000);
+
+    return () => clearInterval(intervalId);
+  }, []);
   return (
     <Box
       bgcolor="#DDDDDD"
@@ -269,7 +293,7 @@ export default function FirstPage() {
         alignItems="center"
         justifyContent="center"
       >
-        <AnimatedBorder></AnimatedBorder>
+        <AnimatedBorder style={{ backgroundColor }}></AnimatedBorder>
       </Box>
     </Box>
   );

@@ -1,6 +1,21 @@
 import { Box, Button, Typography } from "@mui/material";
+import { Application } from "@splinetool/runtime";
+import { useEffect } from "react";
 
 export default function About() {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/resume.pdf"; // Update this with the actual file path
+    link.download = "PrashannaLohani_resume.pdf"; // Update this with the desired file name
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+  useEffect(() => {
+    const canvas = document.getElementById("canvas3d");
+    const app = new Application(canvas);
+    app.load("https://prod.spline.design/5HkyfB7LyQRscdU5/scene.splinecode");
+  }, []);
   return (
     <Box
       minHeight="80vh"
@@ -15,21 +30,20 @@ export default function About() {
         maxWidth="70vh"
         minWidth="50vh"
         minHeight="50vh"
-        bgcolor="red"
         sx={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bGFwdG9wfGVufDB8fDB8fHww')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
           borderRadius: "2rem",
-          "&:hover": {
-            boxShadow:
-              "rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;",
-            transition: "0.3s",
-          },
+          overflow: "hidden", // Ensure the canvas is contained within the box
         }}
-      ></Box>
+      >
+        <canvas
+          id="canvas3d"
+          style={{
+            width: "100%",
+            height: "100%",
+            cursor: "grab",
+          }}
+        ></canvas>
+      </Box>
       <Box minHeight="20vh" p="2rem" maxWidth="40rem">
         <Typography
           variant="h5"
@@ -60,7 +74,11 @@ export default function About() {
           My current main stack is React/Nextjs. in combination with the
           Tailwind, Material UI and JavaScript
         </Typography>
-        <Button variant="contained" sx={{ mt: "1rem" }}>
+        <Button
+          variant="contained"
+          sx={{ mt: "1rem" }}
+          onClick={handleDownload}
+        >
           Download Resume
         </Button>
       </Box>

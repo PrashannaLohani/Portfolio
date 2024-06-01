@@ -1,0 +1,26 @@
+* {
+  cursor: none;
+}
+
+.custom-cursor {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  pointer-events: none; /* Prevent the cursor from interfering with other elements */
+  background-color: black;
+  border-radius: 50%;
+  transition: transform 0.1s ease, opacity 0.2s ease;
+  z-index: 9999; /* Ensure it is on top of other elements */
+}
+
+.trail {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  pointer-events: none;
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+  z-index: 9998;
+  opacity: 0; /* Start invisible */
+}
