@@ -1,13 +1,16 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import CursorLayout from "./Cursorlayout";
 
 export default function RootLayout() {
   return (
     <>
-      <Navbar />
-      <Outlet />
-      <Footer />
+      <CursorLayout>
+        <Navbar />
+        <Outlet />
+        <Footer />
+      </CursorLayout>
     </>
   );
 }

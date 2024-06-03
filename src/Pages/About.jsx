@@ -1,3 +1,4 @@
+import { Download } from "@mui/icons-material";
 import { Box, Button, Typography } from "@mui/material";
 import { Application } from "@splinetool/runtime";
 import { useEffect } from "react";
@@ -76,10 +77,11 @@ export default function About() {
         </Typography>
         <Button
           variant="contained"
-          sx={{ mt: "1rem" }}
+          sx={{ mt: "1rem", p: "10px", borderRadius: "1rem", cursor: "none" }}
           onClick={handleDownload}
+          startIcon={<Download />}
         >
-          Download Resume
+          Download CV
         </Button>
       </Box>
     </Box>

@@ -71,7 +71,7 @@ export default function Contact() {
                     color: "primary.light",
                     transform: "translateY(-2px)",
                   },
-                  cursor: "pointer",
+
                   transition: "transform 0.3s",
                 }}
               >
@@ -114,7 +114,7 @@ export default function Contact() {
                     color: "primary.light",
                     transform: "translateY(-2px)",
                   },
-                  cursor: "pointer",
+
                   transition: "transform 0.3s",
                 }}
               >

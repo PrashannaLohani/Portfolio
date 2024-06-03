@@ -39,7 +39,7 @@ export default function Footer() {
                     transform: "translateY(-7px)",
                     boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
                   },
-                  cursor: "pointer",
+
                   transition: "transform 0.3s",
                 }}
               />
@@ -60,7 +60,7 @@ export default function Footer() {
                     transform: "translateY(-7px)",
                     boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
                   },
-                  cursor: "pointer",
+
                   transition: "transform 0.3s",
                 }}
               />
@@ -80,7 +80,7 @@ export default function Footer() {
                     transform: "translateY(-7px)",
                     boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
                   },
-                  cursor: "pointer",
+
                   transition: "transform 0.3s",
                 }}
               />
@@ -96,7 +96,7 @@ export default function Footer() {
                     transform: "translateY(-7px)",
                     boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
                   },
-                  cursor: "pointer",
+
                   transition: "transform 0.3s",
                 }}
               />

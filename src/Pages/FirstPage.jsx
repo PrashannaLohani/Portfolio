@@ -99,7 +99,7 @@ export default function FirstPage() {
                   color: "#0A66C2",
                   transform: "translateY(-7px)",
                 },
-                cursor: "pointer",
+
                 transition: "transform 0.3s",
               }}
             />
@@ -118,7 +118,7 @@ export default function FirstPage() {
                   color: "#181717",
                   transform: "translateY(-7px)",
                 },
-                cursor: "pointer",
+
                 transition: "transform 0.3s",
               }}
             />

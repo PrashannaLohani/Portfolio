@@ -35,7 +35,7 @@ export default function Navbar() {
                 color: "primary.light",
                 transform: "translateY(-7px)",
               },
-              cursor: "pointer",
+
               transition: "transform 0.3s",
             }}
           >
@@ -53,7 +53,7 @@ export default function Navbar() {
                 color: "primary.light",
                 transform: "translateY(-7px)",
               },
-              cursor: "pointer",
+
               transition: "transform 0.3s",
             }}
           >
@@ -71,7 +71,7 @@ export default function Navbar() {
                 color: "primary.light",
                 transform: "translateY(-7px)",
               },
-              cursor: "pointer",
+
               transition: "transform 0.3s",
             }}
           >
@@ -89,7 +89,7 @@ export default function Navbar() {
                 color: "primary.light",
                 transform: "translateY(-7px)",
               },
-              cursor: "pointer",
+
               transition: "transform 0.3s",
             }}
           >

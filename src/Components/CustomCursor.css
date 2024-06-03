@@ -5,16 +5,17 @@
 .custom-cursor {
   width: 10px;
   height: 10px;
-  position: absolute;
+  position: fixed; /* Change to fixed to avoid resetting on scroll */
   pointer-events: none; /* Prevent the cursor from interfering with other elements */
   background-color: black;
   border-radius: 50%;
   transition: transform 0.1s ease, opacity 0.2s ease;
   z-index: 9999; /* Ensure it is on top of other elements */
+  opacity: 1; /* Ensure default opacity is 1 */
 }
 
 .trail {
-  position: absolute;
+  position: fixed; /* Change to fixed to avoid resetting on scroll */
   width: 20px;
   height: 20px;
   background-color: rgba(0, 0, 0, 0.3);
