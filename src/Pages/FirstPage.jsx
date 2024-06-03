@@ -1,9 +1,10 @@
+import React, { useEffect, useState } from "react";
 import { GitHub, LinkedIn } from "@mui/icons-material";
-import { Box, Divider, Fade, Tooltip, Typography, Zoom } from "@mui/material";
-import { styled } from "@mui/system";
-import { useEffect, useState } from "react";
+import { Box, Divider, Tooltip, Typography, Zoom } from "@mui/material";
+import { styled, useTheme } from "@mui/system";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
-const AnimatedBorder = styled("div")({
+const AnimatedBorder = styled("div")(({ theme }) => ({
   animation: "morph 8s ease-in-out infinite",
   backgroundImage: "url('/Mypic2.png')", // Replace with the actual path
   backgroundPosition: "50%",
@@ -11,8 +12,8 @@ const AnimatedBorder = styled("div")({
   backgroundSize: "cover",
   border: "3px solid #2d2e32",
   borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%",
-  height: "25rem", // Reduced height
-  width: "25rem", // Reduced width
+  height: "20rem", // Reduced height
+  width: "20rem", // Reduced width
   position: "relative",
   transition: "all 1s ease-in-out",
   "@keyframes morph": {
@@ -20,9 +21,12 @@ const AnimatedBorder = styled("div")({
     "50%": { borderRadius: "30% 60% 70% 40% / 30% 70% 40% 60%" },
     "100%": { borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%" },
   },
-});
+}));
+
 export default function FirstPage() {
   const [backgroundColor, setBackgroundColor] = useState("pink");
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("lg")); // Adjust the breakpoint as needed
 
   useEffect(() => {
     const calmColors = [
@@ -46,6 +50,7 @@ export default function FirstPage() {
 
     return () => clearInterval(intervalId);
   }, []);
+
   return (
     <Box
       bgcolor="#DDDDDD"
@@ -53,14 +58,33 @@ export default function FirstPage() {
       sx={{
         display: "flex",
         justifyContent: "center",
+        flexWrap: "wrap",
         alignItems: "center",
         gap: "5rem",
+        flexDirection: isMobile ? "column" : "row",
+        padding: isMobile ? "1rem" : "0",
       }}
     >
-      <Box minHeight="20vh" p="2rem" maxWidth="40rem">
+      {isMobile && (
+        <Box
+          minHeight="20vh"
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <AnimatedBorder style={{ backgroundColor }}></AnimatedBorder>
+        </Box>
+      )}
+
+      <Box
+        minHeight="20vh"
+        p="2rem"
+        maxWidth="40rem"
+        textAlign={isMobile ? "center" : "left"}
+      >
         <Typography
           variant="h3"
-          fontWeight="900" // Setting fontWeight to 900 for very bold
+          fontWeight="700" // Setting fontWeight to 900 for very bold
           color="#2d2e32"
           sx={{ flexGrow: 1, fontFamily: "Poppins" }}
         >
@@ -84,7 +108,12 @@ export default function FirstPage() {
           Hi, I'm Prashanna Lohani. A passionate Front-end React Developer based
           in Kathmandu, Nepal.
         </Typography>
-        <Box display="flex" gap="5px" mt="2rem">
+        <Box
+          display="flex"
+          gap="5px"
+          mt="2rem"
+          justifyContent={isMobile ? "center" : "flex-start"}
+        >
           <a
             href="https://www.linkedin.com/in/prashanna-lohani-439317284/"
             target="_blank"
@@ -99,7 +128,6 @@ export default function FirstPage() {
                   color: "#0A66C2",
                   transform: "translateY(-7px)",
                 },
-
                 transition: "transform 0.3s",
               }}
             />
@@ -118,14 +146,17 @@ export default function FirstPage() {
                   color: "#181717",
                   transform: "translateY(-7px)",
                 },
-
                 transition: "transform 0.3s",
               }}
             />
           </a>
         </Box>
 
-        <Box mt="2rem" alignItems="center" justifyContent="center">
+        <Box
+          mt="2rem"
+          alignItems="center"
+          justifyContent={isMobile ? "center" : "flex-start"}
+        >
           <Typography
             variant="h6"
             fontWeight="400"
@@ -135,7 +166,13 @@ export default function FirstPage() {
             Tech Stack
           </Typography>
           <Divider sx={{ mt: "1rem" }} />
-          <Box display="flex" gap="20px" flexWrap="wrap" mt="1rem">
+          <Box
+            display="flex"
+            gap="20px"
+            flexWrap="wrap"
+            mt="1rem"
+            justifyContent={isMobile ? "center" : "flex-start"}
+          >
             <Box
               sx={{
                 "&:hover": {
@@ -287,14 +324,18 @@ export default function FirstPage() {
           </Box>
         </Box>
       </Box>
-      <Box
-        minHeight="20vh"
-        display="flex"
-        alignItems="center"
-        justifyContent="center"
-      >
-        <AnimatedBorder style={{ backgroundColor }}></AnimatedBorder>
-      </Box>
+
+      {!isMobile && (
+        <Box
+          minHeight="20vh"
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          mt="2rem"
+        >
+          <AnimatedBorder style={{ backgroundColor }}></AnimatedBorder>
+        </Box>
+      )}
     </Box>
   );
 }

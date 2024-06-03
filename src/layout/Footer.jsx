@@ -1,7 +1,11 @@
+import { useTheme } from "@emotion/react";
 import { GitHub, Instagram, LinkedIn, Twitter } from "@mui/icons-material";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery } from "@mui/material";
 
 export default function Footer() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
+
   return (
     <>
       <Box
@@ -10,98 +14,86 @@ export default function Footer() {
         display="flex"
         flexDirection="column"
         justifyContent="center"
+        alignItems="center"
+        textAlign="center"
+        p={isMobile ? "2rem" : "5rem"}
       >
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-around",
-          }}
-        >
-          <Box>
-            <Typography variant="h6" color="#fff" fontWeight="700">
-              Copyright © 2024. All rights are reserved
-            </Typography>
-          </Box>
-          <Box display="flex" gap="1rem">
-            <a
-              href="https://github.com/Prashanna69"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <GitHub
-                sx={{
-                  color: "white",
-                  height: "30px",
-                  width: "30px",
-                  "&:hover": {
-                    color: "#181717",
-                    transform: "translateY(-7px)",
-                    boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
-                  },
-
-                  transition: "transform 0.3s",
-                }}
-              />
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/prashanna-lohani-439317284/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <LinkedIn
-                sx={{
-                  color: "white",
-                  height: "30px",
-                  width: "30px",
-                  "&:hover": {
-                    color: "#0A66C2",
-                    transform: "translateY(-7px)",
-                    boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
-                  },
-
-                  transition: "transform 0.3s",
-                }}
-              />
-            </a>
-            <a
-              href="https://www.instagram.com/sauji_._/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Instagram
-                sx={{
-                  color: "white",
-                  height: "30px",
-                  width: "30px",
-                  "&:hover": {
-                    color: "#D6249F",
-                    transform: "translateY(-7px)",
-                    boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
-                  },
-
-                  transition: "transform 0.3s",
-                }}
-              />
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <Twitter
-                sx={{
-                  color: "white",
-                  height: "30px",
-                  width: "30px",
-                  "&:hover": {
-                    color: "#1DA1F2",
-                    transform: "translateY(-7px)",
-                    boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
-                  },
-
-                  transition: "transform 0.3s",
-                }}
-              />
-            </a>
-          </Box>
+        <Typography variant="h6" color="#fff" fontWeight="700" mb="1rem">
+          Copyright © 2024. All rights are reserved
+        </Typography>
+        <Box display="flex" gap="1rem">
+          <a
+            href="https://github.com/Prashanna69"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GitHub
+              sx={{
+                color: "white",
+                height: "30px",
+                width: "30px",
+                "&:hover": {
+                  color: "#181717",
+                  transform: "translateY(-7px)",
+                  boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
+                },
+                transition: "transform 0.3s",
+              }}
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/prashanna-lohani-439317284/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LinkedIn
+              sx={{
+                color: "white",
+                height: "30px",
+                width: "30px",
+                "&:hover": {
+                  color: "#0A66C2",
+                  transform: "translateY(-7px)",
+                  boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
+                },
+                transition: "transform 0.3s",
+              }}
+            />
+          </a>
+          <a
+            href="https://www.instagram.com/sauji_._/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Instagram
+              sx={{
+                color: "white",
+                height: "30px",
+                width: "30px",
+                "&:hover": {
+                  color: "#D6249F",
+                  transform: "translateY(-7px)",
+                  boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
+                },
+                transition: "transform 0.3s",
+              }}
+            />
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <Twitter
+              sx={{
+                color: "white",
+                height: "30px",
+                width: "30px",
+                "&:hover": {
+                  color: "#1DA1F2",
+                  transform: "translateY(-7px)",
+                  boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
+                },
+                transition: "transform 0.3s",
+              }}
+            />
+          </a>
         </Box>
       </Box>
     </>

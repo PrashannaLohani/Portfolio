@@ -1,18 +1,23 @@
-import { Box, Typography } from "@mui/material";
-import PlaceIcon from "@mui/icons-material/Place";
+import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { MailOutline, MapOutlined } from "@mui/icons-material";
 
 export default function Contact() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
+
   return (
     <Box
       minHeight="20rem"
       sx={{
         display: "flex",
-        justifyContent: "flex-start",
+        justifyContent: isMobile ? "center" : "flex-start",
         alignItems: "center",
+        flexDirection: isMobile ? "column" : "row",
+
         gap: "5rem",
         fontFamily: "Poppins",
-        p: "10rem",
+        p: isMobile ? "2rem" : "10rem",
+        textAlign: isMobile ? "center" : "left",
       }}
     >
       <Box>
@@ -31,13 +36,23 @@ export default function Contact() {
           mt="1rem"
           sx={{ flexGrow: 1, fontFamily: "Poppins" }}
         >
-          Feel Free to Contact Me ! 👇
+          Feel Free to Contact Me! 👇
         </Typography>
-        <Box display="flex" alignItems="center" gap=" 1rem" mt="2rem">
+        <Box
+          display="flex"
+          alignItems={isMobile ? "center" : "flex-start"}
+          gap="1rem"
+          mt="2rem"
+          flexDirection={isMobile ? "column" : "row"}
+          flexWrap="wrap"
+        >
           <Box
             borderRadius="2rem"
-            boxShadow=" rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+            boxShadow="rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
             p="1rem"
+            alignContent="center"
+            display="flex"
+            justifyContent="center"
           >
             <MapOutlined
               sx={{
@@ -71,7 +86,6 @@ export default function Contact() {
                     color: "primary.light",
                     transform: "translateY(-2px)",
                   },
-
                   transition: "transform 0.3s",
                 }}
               >
@@ -80,9 +94,11 @@ export default function Contact() {
             </a>
           </Box>
           <Box
-            borderRadius="5rem"
-            boxShadow=" rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+            borderRadius="2rem"
+            boxShadow="rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
             p="1rem"
+            display="flex"
+            justifyContent="center"
           >
             <MailOutline
               sx={{
@@ -114,7 +130,6 @@ export default function Contact() {
                     color: "primary.light",
                     transform: "translateY(-2px)",
                   },
-
                   transition: "transform 0.3s",
                 }}
               >

@@ -1,9 +1,11 @@
 import { Download } from "@mui/icons-material";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Typography, useMediaQuery } from "@mui/material";
 import { Application } from "@splinetool/runtime";
 import { useEffect } from "react";
 
 export default function About() {
+  const isMobile = useMediaQuery("(max-width:600px)");
+
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = "/resume.pdf"; // Update this with the actual file path
@@ -12,29 +14,32 @@ export default function About() {
     link.click();
     document.body.removeChild(link);
   };
+
   useEffect(() => {
     const canvas = document.getElementById("canvas3d");
     const app = new Application(canvas);
     app.load("https://prod.spline.design/5HkyfB7LyQRscdU5/scene.splinecode");
   }, []);
+
   return (
     <Box
       minHeight="80vh"
       display="flex"
       alignItems="center"
       justifyContent="center"
-      gap="5rem"
+      gap={isMobile ? "1rem" : "5rem"}
+      flexDirection={isMobile ? "column" : "row"}
       flexWrap="wrap"
     >
       <Box
-        maxHeight="70vh"
-        maxWidth="70vh"
-        minWidth="50vh"
-        minHeight="50vh"
+        maxHeight={isMobile ? "50vh" : "70vh"}
+        maxWidth={isMobile ? "80vw" : "70vh"}
+        minWidth={isMobile ? "80vw" : "50vh"}
+        minHeight={isMobile ? "40vh" : "50vh"}
         sx={{
           borderRadius: "2rem",
           overflow: "hidden", // Ensure the canvas is contained within the box
-          cursor: "none",
+          cursor: "grab",
         }}
       >
         <canvas
@@ -46,7 +51,11 @@ export default function About() {
           }}
         ></canvas>
       </Box>
-      <Box minHeight="20vh" p="2rem" maxWidth="40rem">
+      <Box
+        minHeight="20vh"
+        p={isMobile ? "1rem" : "2rem"}
+        maxWidth={isMobile ? "80vw" : "40rem"}
+      >
         <Typography
           variant="h5"
           color="#147efb"

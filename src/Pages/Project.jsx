@@ -32,6 +32,7 @@ export default function Project() {
       bgcolor="#DDDDDD"
       minHeight="50vh"
       sx={{
+        minWidth: "20rem",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -51,10 +52,13 @@ export default function Project() {
       <Box
         minHeight="auto"
         p="1rem"
-        minWidth="40rem"
-        display="flex"
-        justifyContent="flex-end"
-        gap="2rem"
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          gap: "2rem",
+          maxWidth: "100%",
+        }}
       >
         {projects.map((project) => (
           <Card
@@ -63,13 +67,12 @@ export default function Project() {
               maxWidth: 345,
               bgcolor: "#FFFACD",
               boxShadow:
-                " rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;",
+                "rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px",
               borderRadius: "1rem",
-              mt: "2rem",
-              position: "relative", // Ensure overlay respects card boundaries
-              overflow: "hidden", // Hide overflow to clip overlay
+              position: "relative",
+              overflow: "hidden",
               "&:hover": {
-                transform: "translateY(-7px) scale(1.05)", // Zoom effect
+                transform: "translateY(-7px) scale(1.05)",
               },
               transition: "transform 0.3s",
             }}
@@ -77,7 +80,7 @@ export default function Project() {
             <CardMedia
               sx={{
                 height: 140,
-                position: "relative", // Position for overlay
+                position: "relative",
                 "&::after": {
                   content: '""',
                   position: "absolute",
@@ -85,13 +88,13 @@ export default function Project() {
                   left: 0,
                   right: 0,
                   bottom: 0,
-                  backgroundColor: "rgba(0, 0, 0, 0.5)", // Overlay color
-                  zIndex: 1, // Ensure overlay appears above image
-                  opacity: 0, // Initially hidden
-                  transition: "opacity 0.3s", // Fade effect
+                  backgroundColor: "rgba(0, 0, 0, 0.5)",
+                  zIndex: 1,
+                  opacity: 0,
+                  transition: "opacity 0.3s",
                 },
                 "&:hover::after": {
-                  opacity: 1, // Show overlay on hover
+                  opacity: 1,
                 },
               }}
               image={project.background_photo}
@@ -117,25 +120,16 @@ export default function Project() {
               </Typography>
             </CardContent>
             <CardActions>
-              <IconButton aria-label="open project">
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <OpenInNewIcon sx={{ color: "#2d2e32", cursor: "None" }} />
-                </a>
-              </IconButton>
-              <IconButton aria-label="open project">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <GitHub sx={{ color: "#2d2e32", cursor: "None" }} />
-                </a>
-              </IconButton>
-
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
+                <OpenInNewIcon sx={{ color: "#2d2e32" }} />
+              </a>
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <GitHub sx={{ color: "#2d2e32" }} />
+              </a>
               <Chip label={project.difficulty} color="success" />
             </CardActions>
           </Card>
