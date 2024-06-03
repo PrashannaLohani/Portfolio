@@ -34,6 +34,7 @@ export default function About() {
         sx={{
           borderRadius: "2rem",
           overflow: "hidden", // Ensure the canvas is contained within the box
+          cursor: "none",
         }}
       >
         <canvas

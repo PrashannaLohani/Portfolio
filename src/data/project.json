@@ -1,0 +1,24 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "name": "Expense Calculator",
+      "title": "Calculator",
+      "difficulty": "Basic level",
+      "description": "This is a sample Frontend project of an Expense calculator which track the income and expense of a person.",
+      "background_photo": "/Expense.png",
+      "link": "https://prashanna69.github.io/JavaScript-Expense-tracker/",
+      "github": "https://github.com/Prashanna69/JavaScript-Expense-tracker"
+    },
+    {
+      "id": "2",
+      "name": "Weather App",
+      "title": "Weather",
+      "difficulty": "Intermidiate level",
+      "description": "This is a sample Frontend project of an Weather Forcast which provides information of any place in the world.",
+      "background_photo": "https://example.com/project_background1.jpg",
+      "link": "",
+      "github": ""
+    }
+  ]
+}
