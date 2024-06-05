@@ -6,7 +6,6 @@ import {
   CardContent,
   CardMedia,
   Chip,
-  IconButton,
   Typography,
 } from "@mui/material";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
@@ -121,14 +120,32 @@ export default function Project() {
             </CardContent>
             <CardActions>
               <a href={project.link} target="_blank" rel="noopener noreferrer">
-                <OpenInNewIcon sx={{ color: "#2d2e32" }} />
+                <OpenInNewIcon
+                  sx={{
+                    color: "#2d2e32",
+                    "&:hover": {
+                      color: "secondary.light",
+                      transform: "translateY(-7px)",
+                    },
+                    transition: "transform 0.3s",
+                  }}
+                />
               </a>
               <a
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <GitHub sx={{ color: "#2d2e32" }} />
+                <GitHub
+                  sx={{
+                    color: "#2d2e32",
+                    "&:hover": {
+                      color: "primary.light",
+                      transform: "translateY(-7px)",
+                    },
+                    transition: "transform 0.3s",
+                  }}
+                />
               </a>
               <Chip label={project.difficulty} color="success" />
             </CardActions>

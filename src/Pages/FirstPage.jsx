@@ -22,7 +22,6 @@ const AnimatedBorder = styled("div")(({ theme }) => ({
     "100%": { borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%" },
   },
 }));
-
 export default function FirstPage() {
   const [backgroundColor, setBackgroundColor] = useState("pink");
   const theme = useTheme();

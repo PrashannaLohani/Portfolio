@@ -4,7 +4,7 @@ import { Box, Typography, useMediaQuery } from "@mui/material";
 
 export default function Footer() {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <>
@@ -12,10 +12,9 @@ export default function Footer() {
         bgcolor="#2d2e32"
         minHeight="20vh"
         display="flex"
-        flexDirection="column"
-        justifyContent="center"
+        flexDirection={isMobile ? "column" : "row"}
+        justifyContent={isMobile ? "center" : "space-around"}
         alignItems="center"
-        textAlign="center"
         p={isMobile ? "2rem" : "5rem"}
       >
         <Typography variant="h6" color="#fff" fontWeight="700" mb="1rem">
