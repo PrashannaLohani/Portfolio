@@ -34,7 +34,7 @@ export default function Footer() {
                 "&:hover": {
                   color: "#181717",
                   transform: "translateY(-7px)",
-                  boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
+                  filter: "0px 4px 8px rgba(0, 0, 0, 0.2)",
                 },
                 transition: "transform 0.3s",
               }}
@@ -53,7 +53,7 @@ export default function Footer() {
                 "&:hover": {
                   color: "#0A66C2",
                   transform: "translateY(-7px)",
-                  boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
+                  filter: "0px 4px 8px rgba(0, 0, 0, 0.2)",
                 },
                 transition: "transform 0.3s",
               }}
@@ -72,7 +72,7 @@ export default function Footer() {
                 "&:hover": {
                   color: "#D6249F",
                   transform: "translateY(-7px)",
-                  boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
+                  filter: "0px 4px 8px rgba(0, 0, 0, 0.2)",
                 },
                 transition: "transform 0.3s",
               }}
@@ -87,7 +87,7 @@ export default function Footer() {
                 "&:hover": {
                   color: "#1DA1F2",
                   transform: "translateY(-7px)",
-                  boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
+                  filter: "0px 4px 8px rgba(0, 0, 0, 0.2)",
                 },
                 transition: "transform 0.3s",
               }}

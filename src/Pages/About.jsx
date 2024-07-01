@@ -81,8 +81,8 @@ export default function About() {
           sx={{ flexGrow: 1, fontFamily: "Poppins" }}
         >
           Hey, My name is Prashanna lohani, and I'm a Frontend Developer. I like
-          developing User Friendly and minimilistic UI/UX <br />
-          My current main stack is React/Nextjs. in combination with the
+          developing User Friendly and minimilistic UI/UX. <br />
+          My current main stack is React/Nextjs in combination with the
           Tailwind, Material UI and JavaScript
         </Typography>
         <Button

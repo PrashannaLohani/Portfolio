@@ -99,7 +99,7 @@ export default function Navbar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
-        position="static"
+        position="fixed"
         color="transparent"
         sx={{
           height: "5rem",
