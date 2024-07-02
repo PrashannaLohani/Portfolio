@@ -6,7 +6,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 const AnimatedBorder = styled("div")(({ theme }) => ({
   animation: "morph 8s ease-in-out infinite",
-  backgroundImage: "url('/Mypic2.png')", // Replace with the actual path
+  backgroundImage: "url(/Portfolio/Mypic2.png)",
   backgroundPosition: "50%",
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
