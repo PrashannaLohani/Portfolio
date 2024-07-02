@@ -17,7 +17,13 @@ export default function Footer() {
         alignItems="center"
         p={isMobile ? "2rem" : "5rem"}
       >
-        <Typography variant="h6" color="#fff" fontWeight="700" mb="1rem">
+        <Typography
+          variant="h6"
+          color="#fff"
+          fontWeight="700"
+          mb="1rem"
+          textAlign="center"
+        >
           Copyright © 2024. All rights are reserved
         </Typography>
         <Box display="flex" gap="1rem">

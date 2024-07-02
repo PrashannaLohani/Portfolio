@@ -70,6 +70,7 @@ export default function FirstPage() {
           display="flex"
           alignItems="center"
           justifyContent="center"
+          mt="2rem"
         >
           <AnimatedBorder style={{ backgroundColor }}></AnimatedBorder>
         </Box>

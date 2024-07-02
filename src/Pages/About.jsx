@@ -4,6 +4,7 @@ import { Application } from "@splinetool/runtime";
 import { useEffect } from "react";
 
 export default function About() {
+  const isMobileOrTablet = useMediaQuery("(max-width:1024px)"); // Adjust breakpoint as needed
   const isMobile = useMediaQuery("(max-width:600px)");
 
   const handleDownload = () => {
@@ -28,17 +29,18 @@ export default function About() {
       alignItems="center"
       justifyContent="center"
       gap={isMobile ? "1rem" : "5rem"}
-      flexDirection={isMobile ? "column" : "row"}
+      flexDirection={isMobileOrTablet ? "column" : "row"}
       flexWrap="wrap"
     >
       <Box
+        order={isMobileOrTablet ? 3 : 3}
         maxHeight={isMobile ? "50vh" : "70vh"}
         maxWidth={isMobile ? "80vw" : "70vh"}
         minWidth={isMobile ? "80vw" : "50vh"}
         minHeight={isMobile ? "40vh" : "50vh"}
         sx={{
           borderRadius: "2rem",
-          overflow: "hidden", // Ensure the canvas is contained within the box
+          overflow: "hidden",
           cursor: "grab",
         }}
       >
@@ -52,6 +54,7 @@ export default function About() {
         ></canvas>
       </Box>
       <Box
+        order={isMobileOrTablet ? 1 : 2}
         minHeight="20vh"
         p={isMobile ? "1rem" : "2rem"}
         maxWidth={isMobile ? "80vw" : "40rem"}
@@ -80,10 +83,10 @@ export default function About() {
           mt="2rem"
           sx={{ flexGrow: 1, fontFamily: "Poppins" }}
         >
-          Hey, My name is Prashanna lohani, and I'm a Frontend Developer. I like
-          developing User Friendly and minimilistic UI/UX. <br />
-          My current main stack is React/Nextjs in combination with the
-          Tailwind, Material UI and JavaScript
+          Hey, My name is Prashanna Lohani, and I'm a Frontend Developer. I like
+          developing User Friendly and minimalistic UI/UX. <br />
+          My current main stack is React/Nextjs in combination with Tailwind,
+          Material UI, and JavaScript.
         </Typography>
         <Button
           variant="contained"
