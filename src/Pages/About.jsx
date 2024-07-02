@@ -9,7 +9,7 @@ export default function About() {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/resume.pdf"; // Update this with the actual file path
+    link.href = "/Portfolio/PrashannaLohani_resume.pdf"; // Update this with the actual file path
     link.download = "PrashannaLohani_resume.pdf"; // Update this with the desired file name
     document.body.appendChild(link);
     link.click();
