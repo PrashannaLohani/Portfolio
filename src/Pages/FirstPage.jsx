@@ -4,7 +4,7 @@ import { Box, Divider, Tooltip, Typography, Zoom } from "@mui/material";
 import { styled, useTheme } from "@mui/system";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
-const AnimatedBorder = styled("div")(({ theme }) => ({
+const AnimatedBorder = styled("div")(() => ({
   animation: "morph 8s ease-in-out infinite",
   backgroundImage: "url(/Portfolio/Mypic2.png)",
   backgroundPosition: "50%",
@@ -126,6 +126,7 @@ export default function FirstPage() {
                 "&:hover": {
                   color: "#0A66C2",
                   transform: "translateY(-7px)",
+                  transition: "0.5s",
                 },
                 transition: "transform 0.3s",
               }}
@@ -144,6 +145,7 @@ export default function FirstPage() {
                 "&:hover": {
                   color: "#181717",
                   transform: "translateY(-7px)",
+                  transition: "0.5s",
                 },
                 transition: "transform 0.3s",
               }}

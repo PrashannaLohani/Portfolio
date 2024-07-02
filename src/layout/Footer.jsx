@@ -35,6 +35,7 @@ export default function Footer() {
                   color: "#181717",
                   transform: "translateY(-7px)",
                   filter: "0px 4px 8px rgba(0, 0, 0, 0.2)",
+                  transition: "0.5s",
                 },
                 transition: "transform 0.3s",
               }}
@@ -54,40 +55,7 @@ export default function Footer() {
                   color: "#0A66C2",
                   transform: "translateY(-7px)",
                   filter: "0px 4px 8px rgba(0, 0, 0, 0.2)",
-                },
-                transition: "transform 0.3s",
-              }}
-            />
-          </a>
-          <a
-            href="https://www.instagram.com/sauji_._/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Instagram
-              sx={{
-                color: "white",
-                height: "30px",
-                width: "30px",
-                "&:hover": {
-                  color: "#D6249F",
-                  transform: "translateY(-7px)",
-                  filter: "0px 4px 8px rgba(0, 0, 0, 0.2)",
-                },
-                transition: "transform 0.3s",
-              }}
-            />
-          </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <Twitter
-              sx={{
-                color: "white",
-                height: "30px",
-                width: "30px",
-                "&:hover": {
-                  color: "#1DA1F2",
-                  transform: "translateY(-7px)",
-                  filter: "0px 4px 8px rgba(0, 0, 0, 0.2)",
+                  transition: "0.5s",
                 },
                 transition: "transform 0.3s",
               }}
