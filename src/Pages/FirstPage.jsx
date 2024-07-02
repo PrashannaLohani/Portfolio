@@ -61,7 +61,6 @@ export default function FirstPage() {
         alignItems: "center",
         gap: "5rem",
         flexDirection: isMobile ? "column" : "row",
-        marginTop: isMobile ? "3rem" : "0",
         padding: isMobile ? "1rem" : "0",
       }}
     >
@@ -87,7 +86,11 @@ export default function FirstPage() {
           variant="h3"
           fontWeight="700" // Setting fontWeight to 900 for very bold
           color="#2d2e32"
-          sx={{ flexGrow: 1, fontFamily: "Poppins" }}
+          sx={{
+            flexGrow: 1,
+            fontFamily: "Poppins",
+            marginTop: isMobile ? "0" : "5rem",
+          }}
         >
           Front-End React Developer
           <span>
@@ -106,8 +109,10 @@ export default function FirstPage() {
           mt="1rem"
           sx={{ flexGrow: 1, fontFamily: "Poppins" }}
         >
-          Hi, I'm Prashanna Lohani. A passionate Front-end React Developer based
-          in Kathmandu, Nepal.
+          Hi, I'm Prashanna Lohani, a dedicated Front-end React Developer from
+          Kathmandu, Nepal. I thrive on crafting elegant, user-friendly
+          interfaces and am passionate about transforming complex problems into
+          intuitive digital experiences.
         </Typography>
         <Box
           display="flex"

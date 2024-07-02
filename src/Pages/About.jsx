@@ -83,10 +83,11 @@ export default function About() {
           mt="2rem"
           sx={{ flexGrow: 1, fontFamily: "Poppins" }}
         >
-          Hey, My name is Prashanna Lohani, and I'm a Frontend Developer. I like
-          developing User Friendly and minimalistic UI/UX. <br />
-          My current main stack is React/Nextjs in combination with Tailwind,
-          Material UI, and JavaScript.
+          Hey, I'm Prashanna Lohani, a Frontend Developer with a passion for
+          creating user-friendly and minimalist UI/UX designs.
+          <br /> My expertise lies in developing seamless digital experiences
+          using React and Next.js, complemented by Tailwind, Material UI, and
+          JavaScript.
         </Typography>
         <Button
           variant="contained"
