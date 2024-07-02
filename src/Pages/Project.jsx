@@ -16,13 +16,13 @@ export default function Project() {
 
   useEffect(() => {
     // Fetch project data from project.json
-    fetch("/src/data/project.json")
+    fetch("/Portfolio/src/data/project.json")
       .then((response) => response.json())
       .then((data) => {
         setProjects(data.projects);
       })
       .catch((error) => {
-        console.error("Error fetching project data:", error);
+        console.warn("Error fetching project data:");
       });
   }, []);
 

@@ -10,6 +10,7 @@ import {
   ListItem,
   ListItemText,
   useMediaQuery,
+  Divider,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useTheme } from "@mui/material/styles";
@@ -132,18 +133,36 @@ export default function Navbar() {
                 open={drawerOpen}
                 onClose={handleDrawerToggle}
               >
-                <List sx={{ width: 250 }}>
-                  {["Home", "About", "Projects", "Contact"].map((text) => (
-                    <ListItem
-                      button
-                      component="a"
-                      href={`#${text.toLowerCase()}`}
-                      key={text}
-                    >
-                      <ListItemText primary={text} />
-                    </ListItem>
-                  ))}
-                </List>
+                <Box
+                  sx={{
+                    width: 250,
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    padding: "1rem",
+                  }}
+                >
+                  <Typography
+                    variant="h5"
+                    fontWeight="800"
+                    sx={{ fontFamily: "Poppins" }}
+                  >
+                    Prashanna.dev
+                  </Typography>
+                  <Divider sx={{ width: "100%", margin: "1rem 0" }} />
+                  <List>
+                    {["Home", "About", "Projects", "Contact"].map((text) => (
+                      <ListItem
+                        button
+                        component="a"
+                        href={`#${text.toLowerCase()}`}
+                        key={text}
+                      >
+                        <ListItemText primary={text} />
+                      </ListItem>
+                    ))}
+                  </List>
+                </Box>
               </Drawer>
             </>
           ) : (

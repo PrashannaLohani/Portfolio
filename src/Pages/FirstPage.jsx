@@ -61,6 +61,7 @@ export default function FirstPage() {
         alignItems: "center",
         gap: "5rem",
         flexDirection: isMobile ? "column" : "row",
+        marginTop: isMobile ? "3rem" : "0",
         padding: isMobile ? "1rem" : "0",
       }}
     >
