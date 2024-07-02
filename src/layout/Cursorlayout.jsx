@@ -7,9 +7,6 @@ const CursorLayout = ({ children }) => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [trailPosition, setTrailPosition] = useState({ x: 0, y: 0 });
 
-  const theme = useTheme();
-  const isMobileOrTablet = useMediaQuery(theme.breakpoints.down("lg"));
-
   const handleMouseMove = (e) => {
     const { clientX: x, clientY: y } = e;
     setCursorPosition({ x, y });
@@ -47,26 +44,21 @@ const CursorLayout = ({ children }) => {
   };
 
   useEffect(() => {
-    if (!isMobileOrTablet) {
-      document.addEventListener("mousemove", handleMouseMove);
-      document.addEventListener("mouseout", handleMouseOut);
-      document.addEventListener("mouseenter", handleMouseEnter);
-    }
+    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mouseout", handleMouseOut);
+    document.addEventListener("mouseenter", handleMouseEnter);
 
     return () => {
-      if (!isMobileOrTablet) {
-        document.removeEventListener("mousemove", handleMouseMove);
-        document.removeEventListener("mouseout", handleMouseOut);
-        document.removeEventListener("mouseenter", handleMouseEnter);
-      }
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseout", handleMouseOut);
+      document.removeEventListener("mouseenter", handleMouseEnter);
     };
-  }, [isMobileOrTablet]);
+  });
 
   return (
     <>
-      {!isMobileOrTablet && (
-        <Cursor cursorPosition={cursorPosition} trailPosition={trailPosition} />
-      )}
+      <Cursor cursorPosition={cursorPosition} trailPosition={trailPosition} />
+
       <Box minHeight="100vh">{children}</Box>
     </>
   );

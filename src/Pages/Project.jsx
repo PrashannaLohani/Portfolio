@@ -57,7 +57,7 @@ export default function Project() {
             variant="h5"
             fontWeight="600"
             color="#2d2e32"
-            sx={{ fontFamily: "Poppins" }}
+            sx={{ fontFamily: "Poppins", textAlign: "center" }}
           >
             New projects coming soon.. 🤠
           </Typography>

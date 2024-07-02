@@ -138,7 +138,6 @@ export default function Navbar() {
                     width: 250,
                     display: "flex",
                     flexDirection: "column",
-                    alignItems: "center",
                     padding: "1rem",
                   }}
                 >
