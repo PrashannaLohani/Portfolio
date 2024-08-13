@@ -28,7 +28,7 @@ export default function Footer() {
         </Typography>
         <Box display="flex" gap="1rem">
           <a
-            href="https://github.com/Prashanna69"
+            href="https://github.com/PrashannaLohani"
             target="_blank"
             rel="noopener noreferrer"
           >

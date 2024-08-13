@@ -140,7 +140,7 @@ export default function FirstPage() {
             />
           </a>
           <a
-            href="https://github.com/Prashanna69"
+            href="https://github.com/PrashannaLohani"
             target="_blank"
             rel="noopener noreferrer"
           >
