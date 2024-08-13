@@ -109,10 +109,10 @@ export default function FirstPage() {
           mt="1rem"
           sx={{ flexGrow: 1, fontFamily: "Poppins" }}
         >
-          Hi, I'm Prashanna Lohani, a dedicated Front-end React Developer from
-          Kathmandu, Nepal. I thrive on crafting elegant, user-friendly
-          interfaces and am passionate about transforming complex problems into
-          intuitive digital experiences.
+          Hi, I'm Prashanna Lohani, a Front-end React Developer from Kathmandu,
+          Nepal. I create user-friendly interfaces and enjoy turning complex
+          challenges into intuitive solutions. I'm always eager to learn and
+          innovate.
         </Typography>
         <Box
           display="flex"

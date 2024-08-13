@@ -9,7 +9,7 @@ export default function About() {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Portfolio/PrashannaLohani_resume.pdf"; // Update this with the actual file path
+    link.href = "/Portfolio/PrashannaLohani_Resume.pdf"; // Update this with the actual file path
     link.download = "PrashannaLohani_resume.pdf"; // Update this with the desired file name
     document.body.appendChild(link);
     link.click();
@@ -83,15 +83,17 @@ export default function About() {
           mt="2rem"
           sx={{ flexGrow: 1, fontFamily: "Poppins" }}
         >
-          Hey, I'm Prashanna Lohani, a Frontend Developer with a passion for
-          creating user-friendly and minimalist UI/UX designs.
-          <br /> My expertise lies in developing seamless digital experiences
-          using React and Next.js, complemented by Tailwind, Material UI, and
-          JavaScript.
+          Hey, I'm Prashanna Lohani, a Frontend Developer with a strong focus on
+          creating minimalist and user-centric UI/UX designs.
+          <br /> My journey in web development has led me to master tools like
+          React, Next.js, Tailwind, and Material UI, allowing me to build
+          seamless digital experiences. Beyond coding, I enjoy exploring the
+          intersection of technology and design, always striving to push the
+          boundaries of what's possible.
         </Typography>
         <Button
           variant="contained"
-          sx={{ mt: "1rem", p: "10px", borderRadius: "1rem", cursor: "none" }}
+          sx={{ mt: "1rem", p: "15px", borderRadius: "1rem", cursor: "none" }}
           onClick={handleDownload}
           startIcon={<Download />}
         >
