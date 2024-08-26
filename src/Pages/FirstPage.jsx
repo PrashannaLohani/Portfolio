@@ -92,7 +92,7 @@ export default function FirstPage() {
             marginTop: isMobile ? "0" : "5rem",
           }}
         >
-          Front-End React Developer
+          Software Web Developer
           <span>
             <img
               src="https://www.stefantopalovic.com/static/media/waving.1bae5fcfb51082b5c2b4.png"
@@ -109,10 +109,11 @@ export default function FirstPage() {
           mt="1rem"
           sx={{ flexGrow: 1, fontFamily: "Poppins" }}
         >
-          Hi, I'm Prashanna Lohani, a Front-end React Developer from Kathmandu,
-          Nepal. I create user-friendly interfaces and enjoy turning complex
-          challenges into intuitive solutions. I'm always eager to learn and
-          innovate.
+          Hi, I'm Prashanna Lohani, a Web Developer from Kathmandu, Nepal. I
+          specialize in creating dynamic and responsive websites, turning
+          complex challenges into seamless user experiences. With a passion for
+          both front-end and back-end development, I'm always eager to learn new
+          technologies and innovate in the web development space.
         </Typography>
         <Box
           display="flex"

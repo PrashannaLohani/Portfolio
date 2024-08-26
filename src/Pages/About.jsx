@@ -1,5 +1,13 @@
 import { Download } from "@mui/icons-material";
-import { Box, Button, Typography, useMediaQuery } from "@mui/material";
+import {
+  Box,
+  Button,
+  Divider,
+  Tooltip,
+  Typography,
+  useMediaQuery,
+  Zoom,
+} from "@mui/material";
 import { Application } from "@splinetool/runtime";
 import { useEffect } from "react";
 
@@ -73,7 +81,7 @@ export default function About() {
           fontWeight="600"
           sx={{ flexGrow: 1, fontFamily: "Poppins" }}
         >
-          Front-end Developer
+          Software Web Developer
           <br />
           Based in Kathmandu, Nepal
         </Typography>
@@ -83,17 +91,116 @@ export default function About() {
           mt="2rem"
           sx={{ flexGrow: 1, fontFamily: "Poppins" }}
         >
-          Hey, I'm Prashanna Lohani, a Frontend Developer with a strong focus on
-          creating minimalist and user-centric UI/UX designs.
-          <br /> My journey in web development has led me to master tools like
-          React, Next.js, Tailwind, and Material UI, allowing me to build
-          seamless digital experiences. Beyond coding, I enjoy exploring the
-          intersection of technology and design, always striving to push the
-          boundaries of what's possible.
+          Hey, I'm Prashanna Lohani, a Web Developer with a strong focus on
+          creating minimalist and user-centric web applications.
+          <br /> My web development journey has equipped me with expertise in
+          React, Next.js, Tailwind, and Material UI, enabling me to create
+          seamless full-stack experiences. I'm also skilled in Python, Django,
+          and Django Rest Framework, crafting RESTful APIs for both mobile and
+          web applications. Beyond coding, I'm passionate about blending
+          technology and design, always pushing the limits of what's possible.
         </Typography>
+        <Box
+          mt="2rem"
+          alignItems="center"
+          justifyContent={isMobile ? "center" : "flex-start"}
+        >
+          <Typography
+            variant="h6"
+            fontWeight="400"
+            color="#2d2e32"
+            sx={{ flexGrow: 1, fontFamily: "Poppins" }}
+          >
+            Currently I am learning :
+          </Typography>
+          <Divider sx={{ mt: "1rem" }} />
+          <Box
+            display="flex"
+            gap="10px"
+            flexWrap="wrap"
+            mt="1rem"
+            justifyContent={isMobile ? "center" : "flex-start"}
+          >
+            <Box
+              sx={{
+                "&:hover": {
+                  transform: "translateY(-7px)",
+                },
+                transition: "transform 0.3s",
+              }}
+            >
+              <Tooltip
+                title="Docker"
+                arrow
+                TransitionComponent={Zoom}
+                TransitionProps={{ timeout: 600 }}
+              >
+                <img
+                  src="https://skillicons.dev/icons?i=docker"
+                  alt="skill icon"
+                  loading="lazy"
+                />
+              </Tooltip>
+            </Box>
+            <Box
+              sx={{
+                "&:hover": {
+                  transform: "translateY(-7px)",
+                },
+                transition: "transform 0.3s",
+              }}
+            >
+              <Tooltip
+                title="AWS"
+                arrow
+                TransitionComponent={Zoom}
+                TransitionProps={{ timeout: 600 }}
+                sx={{
+                  "&:hover": {
+                    transform: "translateY(-7px)",
+                  },
+                  transition: "transform 0.3s",
+                }}
+              >
+                <img
+                  src="https://skillicons.dev/icons?i=aws"
+                  alt="skill icon"
+                  loading="lazy"
+                />
+              </Tooltip>
+            </Box>
+            <Box
+              sx={{
+                "&:hover": {
+                  transform: "translateY(-7px)",
+                },
+                transition: "transform 0.3s",
+              }}
+            >
+              <Tooltip
+                title="Linux"
+                arrow
+                TransitionComponent={Zoom}
+                TransitionProps={{ timeout: 600 }}
+                sx={{
+                  "&:hover": {
+                    transform: "translateY(-7px)",
+                  },
+                  transition: "transform 0.3s",
+                }}
+              >
+                <img
+                  src="https://skillicons.dev/icons?i=linux"
+                  alt="skill icon"
+                  loading="lazy"
+                />
+              </Tooltip>
+            </Box>
+          </Box>
+        </Box>
         <Button
           variant="contained"
-          sx={{ mt: "1rem", p: "15px", borderRadius: "1rem", cursor: "none" }}
+          sx={{ mt: "2rem", p: "15px", borderRadius: "1rem", cursor: "none" }}
           onClick={handleDownload}
           startIcon={<Download />}
         >
