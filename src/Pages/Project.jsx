@@ -166,7 +166,7 @@ export default function Project() {
                         }}
                       />
                     </a>
-                    <Chip label={project.difficulty} color="success" />
+                    <Chip label={project.difficulty} color={project.color} />
                   </CardActions>
                 </Card>
               ))}
