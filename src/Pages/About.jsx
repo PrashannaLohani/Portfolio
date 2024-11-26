@@ -10,10 +10,15 @@ import {
 } from "@mui/material";
 import { Application } from "@splinetool/runtime";
 import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 export default function About() {
   const isMobileOrTablet = useMediaQuery("(max-width:1024px)"); // Adjust breakpoint as needed
   const isMobile = useMediaQuery("(max-width:600px)");
+  const [ref, inView] = useInView({
+    triggerOnce: true, // Load only once when in view
+    threshold: 0.1, // Load when 10% of the component is visible
+  });
 
   const handleDownload = () => {
     const link = document.createElement("a");
@@ -25,10 +30,12 @@ export default function About() {
   };
 
   useEffect(() => {
-    const canvas = document.getElementById("canvas3d");
-    const app = new Application(canvas);
-    app.load("https://prod.spline.design/5HkyfB7LyQRscdU5/scene.splinecode");
-  }, []);
+    if (inView) {
+      const canvas = document.getElementById("canvas3d");
+      const app = new Application(canvas);
+      app.load("https://prod.spline.design/5HkyfB7LyQRscdU5/scene.splinecode");
+    }
+  }, [inView]);
 
   return (
     <Box
@@ -42,6 +49,7 @@ export default function About() {
     >
       <Box
         order={isMobileOrTablet ? 3 : 3}
+        ref={ref}
         maxHeight={isMobile ? "50vh" : "70vh"}
         maxWidth={isMobile ? "80vw" : "70vh"}
         minWidth={isMobile ? "80vw" : "50vh"}
