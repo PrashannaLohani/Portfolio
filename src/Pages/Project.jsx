@@ -76,12 +76,13 @@ export default function Project() {
               display='flex'
               gap='2rem'
               flexWrap='wrap'
+              maxWidth='90rem'
             >
               {projects?.map((project) => (
                 <Card
                   key={project?.id}
                   sx={{
-                    maxWidth: 345,
+                    maxWidth: 320,
                     background:
                       "linear-gradient(0deg, rgba(237,223,224,1) 33%, rgba(255,255,255,1) 100%)",
                     boxShadow:

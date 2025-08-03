@@ -4,9 +4,8 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
-import { Suspense, lazy } from "react";
+import { lazy } from "react";
 import RootLayout from "./layout/Rootlayout";
-import Loader from "./Pages/Loading";
 
 // Lazy load pages
 const Home = lazy(() => import("./Pages/Home"));

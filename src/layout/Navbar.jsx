@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   AppBar,
   Toolbar,
@@ -11,8 +11,11 @@ import {
   ListItemText,
   useMediaQuery,
   Divider,
+  Icon,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import WbSunnyIcon from "@mui/icons-material/WbSunny";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
 import { useTheme } from "@mui/material/styles";
 
 export default function Navbar() {
@@ -23,14 +26,20 @@ export default function Navbar() {
   const handleDrawerToggle = () => {
     setDrawerOpen(!drawerOpen);
   };
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode((prevMode) => !prevMode);
+    localStorage.setItem("darkMode", !isDarkMode);
+  };
 
   const navLinks = (
     <>
       <Typography
-        variant="h7"
-        component="a"
-        fontWeight="600"
-        href="#home"
+        variant='h7'
+        component='a'
+        fontWeight='600'
+        href='#home'
         sx={{
           textDecoration: "none",
           color: "black",
@@ -44,10 +53,10 @@ export default function Navbar() {
         Home
       </Typography>
       <Typography
-        variant="h7"
-        component="a"
-        fontWeight="600"
-        href="#about"
+        variant='h7'
+        component='a'
+        fontWeight='600'
+        href='#about'
         sx={{
           textDecoration: "none",
           color: "black",
@@ -61,10 +70,10 @@ export default function Navbar() {
         About
       </Typography>
       <Typography
-        variant="h7"
-        component="a"
-        fontWeight="600"
-        href="#projects"
+        variant='h7'
+        component='a'
+        fontWeight='600'
+        href='#projects'
         sx={{
           textDecoration: "none",
           color: "black",
@@ -78,10 +87,10 @@ export default function Navbar() {
         Projects
       </Typography>
       <Typography
-        variant="h7"
-        component="a"
-        fontWeight="600"
-        href="#contact"
+        variant='h7'
+        component='a'
+        fontWeight='600'
+        href='#contact'
         sx={{
           textDecoration: "none",
           color: "black",
@@ -100,8 +109,8 @@ export default function Navbar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
-        position="fixed"
-        color="transparent"
+        position='fixed'
+        color='transparent'
         sx={{
           height: "5rem",
           display: "flex",
@@ -112,8 +121,8 @@ export default function Navbar() {
       >
         <Toolbar>
           <Typography
-            variant="h5"
-            fontWeight="800"
+            variant='h5'
+            fontWeight='800'
             sx={{ flexGrow: 1, fontFamily: "Poppins" }}
           >
             Prashanna.dev
@@ -121,15 +130,15 @@ export default function Navbar() {
           {isMobile ? (
             <>
               <IconButton
-                edge="end"
-                color="inherit"
-                aria-label="menu"
+                edge='end'
+                color='inherit'
+                aria-label='menu'
                 onClick={handleDrawerToggle}
               >
                 <MenuIcon />
               </IconButton>
               <Drawer
-                anchor="right"
+                anchor='right'
                 open={drawerOpen}
                 onClose={handleDrawerToggle}
               >
@@ -142,8 +151,8 @@ export default function Navbar() {
                   }}
                 >
                   <Typography
-                    variant="h5"
-                    fontWeight="800"
+                    variant='h5'
+                    fontWeight='800'
                     sx={{ fontFamily: "Poppins" }}
                   >
                     Prashanna.dev
@@ -153,7 +162,7 @@ export default function Navbar() {
                     {["Home", "About", "Projects", "Contact"].map((text) => (
                       <ListItem
                         button
-                        component="a"
+                        component='a'
                         href={`#${text.toLowerCase()}`}
                         key={text}
                       >
@@ -167,6 +176,34 @@ export default function Navbar() {
           ) : (
             <Box sx={{ display: "flex", gap: 2 }}>{navLinks}</Box>
           )}
+          <Box
+            sx={{ display: "flex", alignItems: "center", marginLeft: "1rem" }}
+          >
+            <IconButton
+              onClick={toggleDarkMode}
+              color='inherit'
+            >
+              {isDarkMode ? (
+                <DarkModeIcon
+                  sx={{
+                    color: "#b0c4de", // light steel blue (moon color)
+                    boxShadow: "0 0 15px 3px rgba(176, 196, 222, 0.6)", // glow
+                    borderRadius: "50%",
+                    transition: "all 0.4s ease",
+                  }}
+                />
+              ) : (
+                <WbSunnyIcon
+                  sx={{
+                    color: "#FFD700", // golden yellow (sun color)
+                    boxShadow: "0 0 15px 3px rgba(255, 215, 0, 0.6)", // glow
+                    borderRadius: "50%",
+                    transition: "all 0.4s ease",
+                  }}
+                />
+              )}
+            </IconButton>
+          </Box>
         </Toolbar>
       </AppBar>
     </Box>

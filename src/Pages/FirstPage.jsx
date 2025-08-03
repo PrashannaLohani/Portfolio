@@ -5,21 +5,36 @@ import { styled, useTheme } from "@mui/system";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 const AnimatedBorder = styled("div")(() => ({
-  animation: "morph 8s ease-in-out infinite",
+  animation: "morph 10s ease-in-out infinite",
   backgroundImage: "url(/Portfolio/Mypic2.png)",
   backgroundPosition: "50%",
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
   border: "3px solid #2d2e32",
   borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%",
-  height: "20rem",
-  width: "20rem",
+  height: "23rem",
+  width: "23rem",
   position: "relative",
   transition: "all 1s ease-in-out",
   "@keyframes morph": {
-    "0%": { borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%" },
-    "50%": { borderRadius: "30% 60% 70% 40% / 30% 70% 40% 60%" },
-    "100%": { borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%" },
+    "0%": {
+      borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%",
+    },
+    "20%": {
+      borderRadius: "50% 60% 35% 65% / 55% 45% 60% 40%",
+    },
+    "40%": {
+      borderRadius: "40% 50% 60% 50% / 60% 50% 40% 60%",
+    },
+    "60%": {
+      borderRadius: "70% 35% 45% 55% / 50% 60% 40% 50%",
+    },
+    "80%": {
+      borderRadius: "55% 45% 65% 35% / 45% 55% 60% 40%",
+    },
+    "100%": {
+      borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%",
+    },
   },
 }));
 
@@ -56,14 +71,28 @@ export default function FirstPage() {
 
   useEffect(() => {
     const calmColors = [
-      "#ADD8E6",
-      "#E0FFFF",
-      "#F5FFFA",
-      "#F0FFF0",
-      "#FFFACD",
-      "#E6E6FA",
-      "#FFE4E1",
-      "#D8BFD8",
+      "#ADD8E6", // Light Blue
+      "#E0FFFF", // Light Cyan
+      "#F5FFFA", // Mint Cream
+      "#F0FFF0", // Honeydew
+      "#FFFACD", // Lemon Chiffon
+      "#E6E6FA", // Lavender
+      "#FFE4E1", // Misty Rose
+      "#D8BFD8", // Thistle
+
+      // New calm colors
+      "#B0E0E6", // Powder Blue
+      "#FAFAD2", // Light Goldenrod Yellow
+      "#F0F8FF", // Alice Blue
+      "#F5F5DC", // Beige
+      "#FDF5E6", // Old Lace
+      "#F8F8FF", // Ghost White
+      "#FFF0F5", // Lavender Blush
+      "#E0EEE0", // Light Greenish Gray
+      "#E0E0F8", // Pale Lavender Blue
+      "#E3F2FD", // Soft Blue
+      "#F1F8E9", // Soft Green (like lime mist)
+      "#FFF8DC", // Cornsilk
     ];
 
     const changeBackgroundColor = () => {
@@ -72,7 +101,7 @@ export default function FirstPage() {
       setBackgroundColor(newColor);
     };
 
-    const intervalId = setInterval(changeBackgroundColor, 2000);
+    const intervalId = setInterval(changeBackgroundColor, 1000);
     return () => clearInterval(intervalId);
   }, []);
 
@@ -105,7 +134,7 @@ export default function FirstPage() {
       <Box
         minHeight='20vh'
         p='2rem'
-        maxWidth='40rem'
+        maxWidth='60rem'
         textAlign={isMobile ? "center" : "left"}
       >
         <Typography
@@ -118,7 +147,7 @@ export default function FirstPage() {
             marginTop: isMobile ? "0" : "5rem",
           }}
         >
-          Software Web Developer
+          Software Engineer
         </Typography>
         <Typography
           variant='h6'
@@ -168,6 +197,7 @@ export default function FirstPage() {
         <Box
           mt='2rem'
           alignItems='center'
+          maxWidth='40rem'
           justifyContent={isMobile ? "center" : "flex-start"}
         >
           <Typography
@@ -216,7 +246,7 @@ export default function FirstPage() {
 
       {!isMobile && (
         <Box
-          minHeight='20vh'
+          minHeight='40vh'
           display='flex'
           alignItems='center'
           justifyContent='center'

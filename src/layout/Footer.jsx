@@ -1,4 +1,4 @@
-import { useTheme } from "@emotion/react";
+import { useTheme } from "@mui/material/styles";
 import { GitHub, Instagram, LinkedIn, Twitter } from "@mui/icons-material";
 import { Box, Typography, useMediaQuery } from "@mui/material";
 

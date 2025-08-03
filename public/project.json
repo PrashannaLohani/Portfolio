@@ -2,17 +2,6 @@
   "projects": [
     {
       "id": "1",
-      "name": "Expense Calculator",
-      "title": "Calculator",
-      "difficulty": "Intermediate level",
-      "color": "info",
-      "description": "This is a sample Frontend project of an Expense calculator which track the income and expense of a person.",
-      "background_photo": "/Portfolio/Expense.png",
-      "link": "https://prashannalohani.github.io/JavaScript-Expense-tracker/",
-      "github": "https://github.com/PrashannaLohani/JavaScript-Expense-tracker"
-    },
-    {
-      "id": "2",
       "name": "Simple Website",
       "title": "BLⱯCK",
       "difficulty": "Basic level",
@@ -22,6 +11,18 @@
       "link": "https://prashannalohani.github.io/Services/",
       "github": "https://github.com/PrashannaLohani/Services"
     },
+    {
+      "id": "2",
+      "name": "Expense Calculator",
+      "title": "Calculator",
+      "difficulty": "Intermediate level",
+      "color": "info",
+      "description": "This is a sample Frontend project of an Expense calculator which track the income and expense of a person.",
+      "background_photo": "/Portfolio/Expense.png",
+      "link": "https://prashannalohani.github.io/JavaScript-Expense-tracker/",
+      "github": "https://github.com/PrashannaLohani/JavaScript-Expense-tracker"
+    },
+
     {
       "id": "3",
       "name": "ShramSansar Website",
