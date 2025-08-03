@@ -4,18 +4,33 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
+import { Suspense, lazy } from "react";
 import RootLayout from "./layout/Rootlayout";
-import Home from "./Pages/Home";
+import Loader from "./Pages/Loading";
+
+// Lazy load pages
+const Home = lazy(() => import("./Pages/Home"));
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/Portfolio" element={<RootLayout />}>
-        <Route index element={<Home />} />
+      <Route
+        path='/'
+        element={<RootLayout />}
+      >
+        <Route
+          index
+          element={<Home />}
+        />
       </Route>
     )
   );
-  return <RouterProvider router={router} />;
+
+  return (
+    <Suspense fallback={<Loader />}>
+      <RouterProvider router={router} />
+    </Suspense>
+  );
 }
 
 export default App;

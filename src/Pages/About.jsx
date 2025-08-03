@@ -22,8 +22,8 @@ export default function About() {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Portfolio/PrashannaLohani_Resume.pdf"; // Update this with the actual file path
-    link.download = "PrashannaLohani_resume.pdf"; // Update this with the desired file name
+    link.href = "/Prashanna_Lohani_Resume.pdf"; // Update this with the actual file path
+    link.download = "Prashanna_Lohani_Resume.pdf"; // Update this with the desired file name
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -39,13 +39,13 @@ export default function About() {
 
   return (
     <Box
-      minHeight="80vh"
-      display="flex"
-      alignItems="center"
-      justifyContent="center"
+      minHeight='80vh'
+      display='flex'
+      alignItems='center'
+      justifyContent='center'
       gap={isMobile ? "1rem" : "5rem"}
       flexDirection={isMobileOrTablet ? "column" : "row"}
-      flexWrap="wrap"
+      flexWrap='wrap'
     >
       <Box
         order={isMobileOrTablet ? 3 : 3}
@@ -61,7 +61,7 @@ export default function About() {
         }}
       >
         <canvas
-          id="canvas3d"
+          id='canvas3d'
           style={{
             width: "100%",
             height: "100%",
@@ -71,22 +71,22 @@ export default function About() {
       </Box>
       <Box
         order={isMobileOrTablet ? 1 : 2}
-        minHeight="20vh"
+        minHeight='20vh'
         p={isMobile ? "1rem" : "2rem"}
         maxWidth={isMobile ? "80vw" : "40rem"}
       >
         <Typography
-          variant="h5"
-          color="#147efb"
-          fontWeight="700"
+          variant='h5'
+          color='#147efb'
+          fontWeight='700'
           sx={{ flexGrow: 1, fontFamily: "Poppins" }}
         >
           ABOUT ME
         </Typography>
         <Typography
-          variant="h4"
-          color="#2d2e32"
-          fontWeight="600"
+          variant='h4'
+          color='#2d2e32'
+          fontWeight='600'
           sx={{ flexGrow: 1, fontFamily: "Poppins" }}
         >
           Software Web Developer
@@ -94,9 +94,9 @@ export default function About() {
           Based in Kathmandu, Nepal
         </Typography>
         <Typography
-          variant="h6"
-          color="#767676"
-          mt="2rem"
+          variant='h6'
+          color='#767676'
+          mt='2rem'
           sx={{ flexGrow: 1, fontFamily: "Poppins" }}
         >
           Hey, I'm Prashanna Lohani, a Web Developer with a strong focus on
@@ -109,24 +109,24 @@ export default function About() {
           technology and design, always pushing the limits of what's possible.
         </Typography>
         <Box
-          mt="2rem"
-          alignItems="center"
+          mt='2rem'
+          alignItems='center'
           justifyContent={isMobile ? "center" : "flex-start"}
         >
           <Typography
-            variant="h6"
-            fontWeight="400"
-            color="#2d2e32"
+            variant='h6'
+            fontWeight='400'
+            color='#2d2e32'
             sx={{ flexGrow: 1, fontFamily: "Poppins" }}
           >
             Currently I am learning :
           </Typography>
           <Divider sx={{ mt: "1rem" }} />
           <Box
-            display="flex"
-            gap="10px"
-            flexWrap="wrap"
-            mt="1rem"
+            display='flex'
+            gap='10px'
+            flexWrap='wrap'
+            mt='1rem'
             justifyContent={isMobile ? "center" : "flex-start"}
           >
             <Box
@@ -138,15 +138,15 @@ export default function About() {
               }}
             >
               <Tooltip
-                title="Docker"
+                title='Docker'
                 arrow
                 TransitionComponent={Zoom}
                 TransitionProps={{ timeout: 600 }}
               >
                 <img
-                  src="https://skillicons.dev/icons?i=docker"
-                  alt="skill icon"
-                  loading="lazy"
+                  src='https://skillicons.dev/icons?i=docker'
+                  alt='skill icon'
+                  loading='lazy'
                 />
               </Tooltip>
             </Box>
@@ -159,7 +159,7 @@ export default function About() {
               }}
             >
               <Tooltip
-                title="AWS"
+                title='AWS'
                 arrow
                 TransitionComponent={Zoom}
                 TransitionProps={{ timeout: 600 }}
@@ -171,9 +171,9 @@ export default function About() {
                 }}
               >
                 <img
-                  src="https://skillicons.dev/icons?i=aws"
-                  alt="skill icon"
-                  loading="lazy"
+                  src='https://skillicons.dev/icons?i=aws'
+                  alt='skill icon'
+                  loading='lazy'
                 />
               </Tooltip>
             </Box>
@@ -186,7 +186,7 @@ export default function About() {
               }}
             >
               <Tooltip
-                title="Linux"
+                title='Linux'
                 arrow
                 TransitionComponent={Zoom}
                 TransitionProps={{ timeout: 600 }}
@@ -198,16 +198,16 @@ export default function About() {
                 }}
               >
                 <img
-                  src="https://skillicons.dev/icons?i=linux"
-                  alt="skill icon"
-                  loading="lazy"
+                  src='https://skillicons.dev/icons?i=linux'
+                  alt='skill icon'
+                  loading='lazy'
                 />
               </Tooltip>
             </Box>
           </Box>
         </Box>
         <Button
-          variant="contained"
+          variant='contained'
           sx={{ mt: "2rem", p: "15px", borderRadius: "1rem", cursor: "none" }}
           onClick={handleDownload}
           startIcon={<Download />}

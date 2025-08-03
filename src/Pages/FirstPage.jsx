@@ -6,7 +6,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 const AnimatedBorder = styled("div")(() => ({
   animation: "morph 8s ease-in-out infinite",
-  backgroundImage: "url(/Portfolio/Mypic2.png)",
+  backgroundImage: "url(/Mypic2.png)",
   backgroundPosition: "50%",
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
@@ -52,8 +52,8 @@ export default function FirstPage() {
 
   return (
     <Box
-      bgcolor="#DDDDDD"
-      minHeight="90vh"
+      bgcolor='#DDDDDD'
+      minHeight='90vh'
       sx={{
         display: "flex",
         justifyContent: "center",
@@ -66,26 +66,26 @@ export default function FirstPage() {
     >
       {isMobile && (
         <Box
-          minHeight="20vh"
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
-          mt="2rem"
+          minHeight='20vh'
+          display='flex'
+          alignItems='center'
+          justifyContent='center'
+          mt='2rem'
         >
           <AnimatedBorder style={{ backgroundColor }}></AnimatedBorder>
         </Box>
       )}
 
       <Box
-        minHeight="20vh"
-        p="2rem"
-        maxWidth="40rem"
+        minHeight='20vh'
+        p='2rem'
+        maxWidth='40rem'
         textAlign={isMobile ? "center" : "left"}
       >
         <Typography
-          variant="h3"
-          fontWeight="700" // Setting fontWeight to 900 for very bold
-          color="#2d2e32"
+          variant='h3'
+          fontWeight='700' // Setting fontWeight to 900 for very bold
+          color='#2d2e32'
           sx={{
             flexGrow: 1,
             fontFamily: "Poppins",
@@ -93,20 +93,12 @@ export default function FirstPage() {
           }}
         >
           Software Web Developer
-          <span>
-            <img
-              src="https://www.stefantopalovic.com/static/media/waving.1bae5fcfb51082b5c2b4.png"
-              alt="wave-icon"
-              width="50" // Set the width to decrease the size
-              height="50" // Set the height to decrease the size
-            />
-          </span>
         </Typography>
         <Typography
-          variant="h6"
-          fontWeight="400"
-          color="#2d2e32"
-          mt="1rem"
+          variant='h6'
+          fontWeight='400'
+          color='#2d2e32'
+          mt='1rem'
           sx={{ flexGrow: 1, fontFamily: "Poppins" }}
         >
           Hi, I'm Prashanna Lohani, a Web Developer from Kathmandu, Nepal. I
@@ -116,15 +108,15 @@ export default function FirstPage() {
           technologies and innovate in the web development space.
         </Typography>
         <Box
-          display="flex"
-          gap="5px"
-          mt="2rem"
+          display='flex'
+          gap='5px'
+          mt='2rem'
           justifyContent={isMobile ? "center" : "flex-start"}
         >
           <a
-            href="https://www.linkedin.com/in/prashanna-lohani-439317284/"
-            target="_blank"
-            rel="noopener noreferrer"
+            href='https://www.linkedin.com/in/prashanna-lohani-439317284/'
+            target='_blank'
+            rel='noopener noreferrer'
           >
             <LinkedIn
               sx={{
@@ -141,9 +133,9 @@ export default function FirstPage() {
             />
           </a>
           <a
-            href="https://github.com/PrashannaLohani"
-            target="_blank"
-            rel="noopener noreferrer"
+            href='https://github.com/PrashannaLohani'
+            target='_blank'
+            rel='noopener noreferrer'
           >
             <GitHub
               sx={{
@@ -162,24 +154,24 @@ export default function FirstPage() {
         </Box>
 
         <Box
-          mt="2rem"
-          alignItems="center"
+          mt='2rem'
+          alignItems='center'
           justifyContent={isMobile ? "center" : "flex-start"}
         >
           <Typography
-            variant="h6"
-            fontWeight="400"
-            color="#2d2e32"
+            variant='h6'
+            fontWeight='400'
+            color='#2d2e32'
             sx={{ flexGrow: 1, fontFamily: "Poppins" }}
           >
             Tech Stack
           </Typography>
           <Divider sx={{ mt: "1rem" }} />
           <Box
-            display="flex"
-            gap="20px"
-            flexWrap="wrap"
-            mt="1rem"
+            display='flex'
+            gap='20px'
+            flexWrap='wrap'
+            mt='1rem'
             justifyContent={isMobile ? "center" : "flex-start"}
           >
             <Box
@@ -191,15 +183,15 @@ export default function FirstPage() {
               }}
             >
               <Tooltip
-                title="HTML and CSS"
+                title='HTML and CSS'
                 arrow
                 TransitionComponent={Zoom}
                 TransitionProps={{ timeout: 600 }}
               >
                 <img
-                  src="https://skillicons.dev/icons?i=html,css"
-                  alt="skill icon"
-                  loading="lazy"
+                  src='https://skillicons.dev/icons?i=html,css'
+                  alt='skill icon'
+                  loading='lazy'
                 />
               </Tooltip>
             </Box>
@@ -212,15 +204,15 @@ export default function FirstPage() {
               }}
             >
               <Tooltip
-                title="JavaScript and TypeScript"
+                title='JavaScript and TypeScript'
                 arrow
                 TransitionComponent={Zoom}
                 TransitionProps={{ timeout: 600 }}
               >
                 <img
-                  src="https://skillicons.dev/icons?i=js,ts"
-                  alt="skill icon"
-                  loading="lazy"
+                  src='https://skillicons.dev/icons?i=js,ts'
+                  alt='skill icon'
+                  loading='lazy'
                 />
               </Tooltip>
             </Box>
@@ -233,15 +225,15 @@ export default function FirstPage() {
               }}
             >
               <Tooltip
-                title="React and Vite"
+                title='React and Vite'
                 arrow
                 TransitionComponent={Zoom}
                 TransitionProps={{ timeout: 600 }}
               >
                 <img
-                  src="https://skillicons.dev/icons?i=react,vite"
-                  alt="skill icon"
-                  loading="lazy"
+                  src='https://skillicons.dev/icons?i=react,vite'
+                  alt='skill icon'
+                  loading='lazy'
                 />
               </Tooltip>
             </Box>
@@ -254,15 +246,15 @@ export default function FirstPage() {
               }}
             >
               <Tooltip
-                title="Tailwind and Material UI"
+                title='Tailwind and Material UI'
                 arrow
                 TransitionComponent={Zoom}
                 TransitionProps={{ timeout: 600 }}
               >
                 <img
-                  src="https://skillicons.dev/icons?i=tailwind,materialui"
-                  alt="skill icon"
-                  loading="lazy"
+                  src='https://skillicons.dev/icons?i=tailwind,materialui'
+                  alt='skill icon'
+                  loading='lazy'
                 />
               </Tooltip>
             </Box>
@@ -275,15 +267,15 @@ export default function FirstPage() {
               }}
             >
               <Tooltip
-                title="Python and Django"
+                title='Python and Django'
                 arrow
                 TransitionComponent={Zoom}
                 TransitionProps={{ timeout: 600 }}
               >
                 <img
-                  src="https://skillicons.dev/icons?i=python,django"
-                  alt="skill icon"
-                  loading="lazy"
+                  src='https://skillicons.dev/icons?i=python,django'
+                  alt='skill icon'
+                  loading='lazy'
                 />
               </Tooltip>
             </Box>
@@ -296,15 +288,15 @@ export default function FirstPage() {
               }}
             >
               <Tooltip
-                title="Postgresql and MongoDB"
+                title='Postgresql and MongoDB'
                 arrow
                 TransitionComponent={Zoom}
                 TransitionProps={{ timeout: 600 }}
               >
                 <img
-                  src="https://skillicons.dev/icons?i=postgresql,mongodb"
-                  alt="skill icon"
-                  loading="lazy"
+                  src='https://skillicons.dev/icons?i=postgresql,mongodb'
+                  alt='skill icon'
+                  loading='lazy'
                 />
               </Tooltip>
             </Box>
@@ -318,15 +310,15 @@ export default function FirstPage() {
               }}
             >
               <Tooltip
-                title="VS Code and Github"
+                title='VS Code and Github'
                 arrow
                 TransitionComponent={Zoom}
                 TransitionProps={{ timeout: 600 }}
               >
                 <img
-                  src="https://skillicons.dev/icons?i=vscode,github"
-                  alt="skill icon"
-                  loading="lazy"
+                  src='https://skillicons.dev/icons?i=vscode,github'
+                  alt='skill icon'
+                  loading='lazy'
                 />
               </Tooltip>
             </Box>
@@ -336,11 +328,11 @@ export default function FirstPage() {
 
       {!isMobile && (
         <Box
-          minHeight="20vh"
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
-          mt="2rem"
+          minHeight='20vh'
+          display='flex'
+          alignItems='center'
+          justifyContent='center'
+          mt='2rem'
         >
           <AnimatedBorder style={{ backgroundColor }}></AnimatedBorder>
         </Box>

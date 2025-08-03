@@ -16,7 +16,7 @@ export default function Project() {
 
   useEffect(() => {
     // Fetch project data from project.json
-    fetch("/Portfolio/project.json")
+    fetch("/project.json")
       .then((response) => response.json())
       .then((data) => {
         setProjects(data.projects);
@@ -28,8 +28,8 @@ export default function Project() {
 
   return (
     <Box
-      bgcolor="#DDDDDD"
-      minHeight="50vh"
+      bgcolor='#DDDDDD'
+      minHeight='50vh'
       sx={{
         minWidth: "20rem",
         display: "flex",
@@ -41,8 +41,8 @@ export default function Project() {
       }}
     >
       <Box
-        minHeight="auto"
-        p="1rem"
+        minHeight='auto'
+        p='1rem'
         sx={{
           display: "flex",
           flexWrap: "wrap",
@@ -54,9 +54,9 @@ export default function Project() {
       >
         {projects.length === 0 ? (
           <Typography
-            variant="h5"
-            fontWeight="600"
-            color="#2d2e32"
+            variant='h5'
+            fontWeight='600'
+            color='#2d2e32'
             sx={{ fontFamily: "Poppins", textAlign: "center" }}
           >
             New projects coming soon.. 🤠
@@ -64,18 +64,22 @@ export default function Project() {
         ) : (
           <>
             <Typography
-              variant="h3"
-              fontWeight="600"
-              color="#2d2e32"
-              textAlign="center"
+              variant='h3'
+              fontWeight='600'
+              color='#2d2e32'
+              textAlign='center'
               sx={{ flexGrow: 1, fontFamily: "Poppins" }}
             >
               Projects
             </Typography>
-            <Box display="flex" gap="2rem" flexWrap="wrap">
-              {projects.map((project) => (
+            <Box
+              display='flex'
+              gap='2rem'
+              flexWrap='wrap'
+            >
+              {projects?.map((project) => (
                 <Card
-                  key={project.id}
+                  key={project?.id}
                   sx={{
                     maxWidth: 345,
                     background:
@@ -111,33 +115,38 @@ export default function Project() {
                         opacity: 1,
                       },
                     }}
-                    image={project.background_photo}
-                    title={project.title}
+                    image={project?.background_photo}
+                    title={project?.title}
                   />
                   <CardContent>
                     <Typography
                       gutterBottom
-                      variant="h5"
-                      fontWeight="600"
-                      color="#2d2e32"
+                      variant='h5'
+                      fontWeight='600'
+                      color='#2d2e32'
                       sx={{ flexGrow: 1, fontFamily: "Poppins" }}
                     >
-                      {project.name}
+                      {project?.name}
                     </Typography>
                     <Typography
-                      variant="body2"
-                      fontWeight="400"
-                      color="#2d2e32"
+                      variant='body2'
+                      fontWeight='400'
+                      color='#2d2e32'
                       sx={{ flexGrow: 1, fontFamily: "Poppins" }}
                     >
-                      {project.description}
+                      {project?.description}
                     </Typography>
                   </CardContent>
-                  <CardActions>
+                  <CardActions
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                    }}
+                  >
                     <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href={project?.link}
+                      target='_blank'
+                      rel='noopener noreferrer'
                     >
                       <OpenInNewIcon
                         sx={{
@@ -150,23 +159,29 @@ export default function Project() {
                         }}
                       />
                     </a>
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <GitHub
-                        sx={{
-                          color: "#2d2e32",
-                          "&:hover": {
-                            color: "primary.light",
-                            transform: "translateY(-7px)",
-                          },
-                          transition: "transform 0.3s",
-                        }}
-                      />
-                    </a>
-                    <Chip label={project.difficulty} color={project.color} />
+                    {project?.github && (
+                      <a
+                        href={project?.github}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                      >
+                        <GitHub
+                          sx={{
+                            color: "#2d2e32",
+                            "&:hover": {
+                              color: "primary.light",
+                              transform: "translateY(-7px)",
+                            },
+                            transition: "transform 0.3s",
+                          }}
+                        />
+                      </a>
+                    )}
+                    <Chip
+                      label={project?.difficulty}
+                      color={project?.color}
+                      style={{ marginBottom: "0.5rem" }}
+                    />
                   </CardActions>
                 </Card>
               ))}
