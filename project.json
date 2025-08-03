@@ -7,7 +7,7 @@
       "difficulty": "Intermediate level",
       "color": "info",
       "description": "This is a sample Frontend project of an Expense calculator which track the income and expense of a person.",
-      "background_photo": "/Portfolio/Expense.png",
+      "background_photo": "/Expense.png",
       "link": "https://prashannalohani.github.io/JavaScript-Expense-tracker/",
       "github": "https://github.com/PrashannaLohani/JavaScript-Expense-tracker"
     },
@@ -18,9 +18,31 @@
       "difficulty": "Basic level",
       "color": "success",
       "description": "This is a sample Frontend project of a Non profitable organization which serves with the slogan Build Grow Serve.",
-      "background_photo": "/Portfolio/Project2BG.png",
+      "background_photo": "/Project2BG.png",
       "link": "https://prashannalohani.github.io/Services/",
       "github": "https://github.com/PrashannaLohani/Services"
+    },
+    {
+      "id": "3",
+      "name": "ShramSansar Website",
+      "title": "ShramSansar",
+      "difficulty": "Advance level",
+      "color": "warning",
+      "description": "This is the official Government website of ShramSansar, a platform for job seekers and employers.",
+      "background_photo": "/Shramsansar.png",
+      "link": "https://shramsansar.gov.np/",
+      "github": ""
+    },
+    {
+      "id": "4",
+      "name": "Calilio",
+      "title": "Calilio-VoIP App",
+      "difficulty": "Advance level",
+      "color": "warning",
+      "description": "This is the SAAS project of a VoIP application which allows users to make voice and video calls.",
+      "background_photo": "/Calilio.png",
+      "link": "https://www.calilio.com/",
+      "github": ""
     }
   ]
 }
