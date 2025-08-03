@@ -22,7 +22,7 @@ export default function About() {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Prashanna_Lohani_Resume.pdf"; // Update this with the actual file path
+    link.href = "/Portfolio/Prashanna_Lohani_Resume.pdf"; // Update this with the actual file path
     link.download = "Prashanna_Lohani_Resume.pdf"; // Update this with the desired file name
     document.body.appendChild(link);
     link.click();
@@ -150,33 +150,7 @@ export default function About() {
                 />
               </Tooltip>
             </Box>
-            <Box
-              sx={{
-                "&:hover": {
-                  transform: "translateY(-7px)",
-                },
-                transition: "transform 0.3s",
-              }}
-            >
-              <Tooltip
-                title='AWS'
-                arrow
-                TransitionComponent={Zoom}
-                TransitionProps={{ timeout: 600 }}
-                sx={{
-                  "&:hover": {
-                    transform: "translateY(-7px)",
-                  },
-                  transition: "transform 0.3s",
-                }}
-              >
-                <img
-                  src='https://skillicons.dev/icons?i=aws'
-                  alt='skill icon'
-                  loading='lazy'
-                />
-              </Tooltip>
-            </Box>
+
             <Box
               sx={{
                 "&:hover": {

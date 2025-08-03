@@ -5,32 +5,37 @@ import { Box, Typography, useMediaQuery } from "@mui/material";
 export default function Footer() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const date = new Date();
+  const year = date.getFullYear();
 
   return (
     <>
       <Box
-        bgcolor="#2d2e32"
-        minHeight="20vh"
-        display="flex"
+        bgcolor='#2d2e32'
+        minHeight='20vh'
+        display='flex'
         flexDirection={isMobile ? "column" : "row"}
         justifyContent={isMobile ? "center" : "space-around"}
-        alignItems="center"
+        alignItems='center'
         p={isMobile ? "2rem" : "5rem"}
       >
         <Typography
-          variant="h6"
-          color="#fff"
-          fontWeight="700"
-          mb="1rem"
-          textAlign="center"
+          variant='h6'
+          color='#fff'
+          fontWeight='700'
+          mb='1rem'
+          textAlign='center'
         >
-          Copyright © 2024. All rights are reserved
+          Copyright © {year}. All rights are reserved
         </Typography>
-        <Box display="flex" gap="1rem">
+        <Box
+          display='flex'
+          gap='1rem'
+        >
           <a
-            href="https://github.com/PrashannaLohani"
-            target="_blank"
-            rel="noopener noreferrer"
+            href='https://github.com/PrashannaLohani'
+            target='_blank'
+            rel='noopener noreferrer'
           >
             <GitHub
               sx={{
@@ -48,9 +53,9 @@ export default function Footer() {
             />
           </a>
           <a
-            href="https://www.linkedin.com/in/prashanna-lohani-439317284/"
-            target="_blank"
-            rel="noopener noreferrer"
+            href='https://www.linkedin.com/in/prashanna-lohani-439317284/'
+            target='_blank'
+            rel='noopener noreferrer'
           >
             <LinkedIn
               sx={{

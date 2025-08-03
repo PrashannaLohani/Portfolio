@@ -15,7 +15,7 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route
-        path='/'
+        path='/Portfolio'
         element={<RootLayout />}
       >
         <Route
@@ -26,11 +26,7 @@ function App() {
     )
   );
 
-  return (
-    <Suspense fallback={<Loader />}>
-      <RouterProvider router={router} />
-    </Suspense>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
