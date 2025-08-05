@@ -8,17 +8,10 @@ import {
   useMediaQuery,
   Zoom,
 } from "@mui/material";
-import { Application } from "@splinetool/runtime";
-import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
 
 export default function About() {
   const isMobileOrTablet = useMediaQuery("(max-width:1024px)"); // Adjust breakpoint as needed
   const isMobile = useMediaQuery("(max-width:600px)");
-  const [ref, inView] = useInView({
-    triggerOnce: true, // Load only once when in view
-    threshold: 0.1, // Load when 10% of the component is visible
-  });
 
   const handleDownload = () => {
     const link = document.createElement("a");
@@ -28,14 +21,6 @@ export default function About() {
     link.click();
     document.body.removeChild(link);
   };
-
-  useEffect(() => {
-    if (inView) {
-      const canvas = document.getElementById("canvas3d");
-      const app = new Application(canvas);
-      app.load("https://prod.spline.design/5HkyfB7LyQRscdU5/scene.splinecode");
-    }
-  }, [inView]);
 
   return (
     <Box
@@ -47,28 +32,6 @@ export default function About() {
       flexDirection={isMobileOrTablet ? "column" : "row"}
       flexWrap='wrap'
     >
-      <Box
-        order={isMobileOrTablet ? 3 : 3}
-        ref={ref}
-        maxHeight={isMobile ? "50vh" : "70vh"}
-        maxWidth={isMobile ? "80vw" : "70vh"}
-        minWidth={isMobile ? "80vw" : "50vh"}
-        minHeight={isMobile ? "40vh" : "50vh"}
-        sx={{
-          borderRadius: "2rem",
-          overflow: "hidden",
-          cursor: "grab",
-        }}
-      >
-        <canvas
-          id='canvas3d'
-          style={{
-            width: "100%",
-            height: "100%",
-            cursor: "grab",
-          }}
-        ></canvas>
-      </Box>
       <Box
         order={isMobileOrTablet ? 1 : 2}
         minHeight='20vh'
@@ -172,7 +135,7 @@ export default function About() {
                 }}
               >
                 <img
-                  src='https://skillicons.dev/icons?i=linux'
+                  src='https://skillicons.dev/icons?i=go'
                   alt='skill icon'
                   loading='lazy'
                 />

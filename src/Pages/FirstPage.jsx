@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { GitHub, LinkedIn } from "@mui/icons-material";
+import { GitHub, LinkedIn, MailOutline } from "@mui/icons-material";
 import { Box, Divider, Tooltip, Typography, Zoom } from "@mui/material";
 import { styled, useTheme } from "@mui/system";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 const AnimatedBorder = styled("div")(() => ({
-  animation: "morph 10s ease-in-out infinite",
+  animation: "morph 25s ease-in-out infinite",
   backgroundImage: "url(/Portfolio/Mypic2.png)",
   backgroundPosition: "50%",
   backgroundRepeat: "no-repeat",
@@ -20,17 +20,32 @@ const AnimatedBorder = styled("div")(() => ({
     "0%": {
       borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%",
     },
+    "10%": {
+      borderRadius: "58% 42% 33% 67% / 63% 35% 68% 38%",
+    },
     "20%": {
       borderRadius: "50% 60% 35% 65% / 55% 45% 60% 40%",
+    },
+    "30%": {
+      borderRadius: "45% 55% 60% 50% / 50% 60% 50% 40%",
     },
     "40%": {
       borderRadius: "40% 50% 60% 50% / 60% 50% 40% 60%",
     },
+    "50%": {
+      borderRadius: "55% 45% 55% 45% / 45% 55% 45% 55%",
+    },
     "60%": {
       borderRadius: "70% 35% 45% 55% / 50% 60% 40% 50%",
     },
+    "70%": {
+      borderRadius: "62% 38% 48% 52% / 52% 58% 42% 48%",
+    },
     "80%": {
       borderRadius: "55% 45% 65% 35% / 45% 55% 60% 40%",
+    },
+    "90%": {
+      borderRadius: "63% 37% 32% 68% / 62% 38% 68% 32%",
     },
     "100%": {
       borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%",
@@ -50,6 +65,12 @@ const socialLinks = [
     url: "https://github.com/PrashannaLohani",
     hoverColor: "#181717",
     label: "GitHub",
+  },
+  {
+    icon: MailOutline,
+    url: "mailto:plohani2003@gmail.com",
+    hoverColor: "#EA4335",
+    label: "Gmail",
   },
 ];
 
@@ -147,7 +168,7 @@ export default function FirstPage() {
             marginTop: isMobile ? "0" : "5rem",
           }}
         >
-          Software Engineer
+          Prashanna Lohani
         </Typography>
         <Typography
           variant='h6'
@@ -156,11 +177,18 @@ export default function FirstPage() {
           mt='1rem'
           sx={{ flexGrow: 1, fontFamily: "Poppins" }}
         >
-          Hi, I'm Prashanna Lohani, a Web Developer from Kathmandu, Nepal. I
-          specialize in creating dynamic and responsive websites, turning
-          complex challenges into seamless user experiences. With a passion for
-          both front-end and back-end development, I'm always eager to learn new
-          technologies and innovate in the web development space.
+          21 years old, Software Engineer based in Kathmandu, Nepal 🇳🇵.
+        </Typography>
+        <Typography
+          variant='h6'
+          fontWeight='400'
+          color='#2d2e32'
+          mt='1rem'
+          sx={{ flexGrow: 1, fontFamily: "Poppins" }}
+        >
+          Frontend By Job, fullstack By Passion. I love to create interactive
+          and user-friendly web applications. I am always eager to learn new
+          technologies and improve my skills.
         </Typography>
 
         <Box

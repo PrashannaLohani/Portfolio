@@ -11,7 +11,6 @@ import {
   ListItemText,
   useMediaQuery,
   Divider,
-  Icon,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
@@ -182,6 +181,7 @@ export default function Navbar() {
             <IconButton
               onClick={toggleDarkMode}
               color='inherit'
+              sx={{ cursor: "none" }}
             >
               {isDarkMode ? (
                 <DarkModeIcon
